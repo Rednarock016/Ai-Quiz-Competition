@@ -1,6 +1,6 @@
 # AI Quiz Competition
 
-> An interactive, real-time AI-powered quiz application that generates unique multiple-choice trivia questions on any topic in seconds, powered by Flask and Groq Cloud LLM inference.
+ An interactive, real-time AI-powered quiz application that generates unique multiple-choice trivia questions on any topic in seconds, powered by Flask and Groq Cloud LLM inference.
 
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.0+-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
