@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Quiz App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="card">
+    <!-- home -->
+    <div id="screen-start" class="screen">
+      <h1>AI Quiz</h1>
+      <p class="subtitle">Fresh questions, every session.</p>
+
+      <label for="topic">Topic</label>
+      <input type="text" id="topic" value="Kolkata" placeholder="e.g. Kolkata, IPL, Python" />
+
+      <label>Difficulty</label>
+      <div class="difficulty-group">
+        <button type="button" class="diff-btn active" data-diff="easy">Easy</button>
+        <button type="button" class="diff-btn" data-diff="medium">Medium</button>
+        <button type="button" class="diff-btn" data-diff="hard">Hard</button>
+      </div>
+
+      <button id="start-btn" class="btn primary-btn">Start Quiz</button>
+    </div>
+
+    <!-- loading -->
+    <div id="screen-loading" class="screen hidden">
+      <div class="loader"></div>
+      <p>AI is writing your questions...</p>
+    </div>
+
+    <!-- quiz -->
+    <div id="screen-quiz" class="screen hidden">
+      <div class="quiz-header">
+        <span id="question-progress">1/5</span>
+        <span id="quiz-score">Score: 0</span>
+        <span id="timer" class="timer-badge">20</span>
+      </div>
+
+      <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <h2 id="question-text">Question text goes here?</h2>
+
+      <div id="options-box" class="options-grid"></div>
+      <p id="answer-explanation" class="answer-explanation hidden"></p>
+    </div>
+
+    <!-- result -->
+    <div id="screen-result" class="screen hidden">
+      <p class="result-title">Quiz Complete</p>
+      <div id="final-score" class="big-score">0</div>
+      <p id="result-summary" class="summary-text">0 of 5 correct &bull; medium &bull; Kolkata</p>
+      <button id="play-again-btn" class="btn primary-btn">Play Again</button>
+    </div>
+  </div>
+
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script> 
+</html>
